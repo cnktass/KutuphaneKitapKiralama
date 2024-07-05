@@ -1,0 +1,147 @@
+﻿@{
+    ViewData["Title"] = "Iletisim Bilgileri";
+}
+
+<head>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 7%;
+            bottom: 0;
+            background-color: #f0f0f0;
+            width: 200px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+            .sidebar h2 {
+                font-size: 18px;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 5px;
+            }
+
+            .sidebar p {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 220px;
+            overflow: hidden;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 7%);
+            margin-left: 220px;
+            overflow: hidden;
+        }
+
+            .image-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        /* Medya sorguları */
+        media (max-width: 768px) {
+            body
+
+        {
+            flex-direction: column;
+        }
+
+        .sidebar {
+            position: relative;
+            width: 100%;
+            top: 0;
+            box-shadow: none;
+        }
+
+        .content {
+            margin-left: 0;
+            padding-top: 20px;
+        }
+
+        .image-container {
+            margin-left: 0;
+            padding-top: 20px;
+            height: calc(100vh - 60px);
+        }
+
+        }
+
+        media (max-width: 480px) {
+            .sidebar
+
+        {
+            display: none;
+        }
+
+        .content {
+            padding: 10px;
+        }
+
+        .image-container {
+            padding: 10px;
+            height: 100vh; /* Tam sayfa yüksekliği */
+        }
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>İletişim Bilgileri</h2>
+        <p><a href="#" onclick="showAddress()">Adres</a></p>
+        <p><a href="#" onclick="showEmail()">E-posta</a></p>
+        <p><a href="#" onclick="showPhone()">Telefon Numarası</a></p>
+        <p><a href="#" onclick="showContactForm()">Faks</a></p>
+    </div>
+
+    <div class="image-container">
+        <img src="/img/library.jpg" alt="Library">
+    </div>
+
+    <script>
+        function showAddress() {
+            alert("Denizati Sokak Kemalpasa:3  Bakirkoy / Istanbul");
+        }
+
+        function showEmail() {
+            alert("cnktass@gmail.com");
+        }
+
+        function showPhone() {
+            alert("+90 555555555.");
+        }
+
+        function showContactForm() {
+            alert("212 212 2122121");
+        }
+    </script>
+</body>

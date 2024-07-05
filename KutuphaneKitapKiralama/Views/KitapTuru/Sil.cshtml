@@ -1,0 +1,26 @@
+﻿@model KitapTuru
+
+<div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+    <div class="row justify-content-center w-50">
+        <div class="col">
+            <div class="card border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h2 class="mb-0">Kitap Türü Sil</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="form-group">
+                            <label asp-for="Ad" class="form-label"></label>
+                            <input asp-for="Ad" disabled class="form-control" />
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <button type="submit" class="btn btn-danger btn-lg">Kitap Türü Sil</button>
+                            <a asp-controller="KitapTuru" asp-action="Index" class="btn btn-secondary btn-lg">Kitap Türlerine Geri Dön</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
